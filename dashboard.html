@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-image">
+
+<div class="dashboard glass">
+
+<aside class="sidebar">
+    <h2>MyApp</h2>
+
+    <nav>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('profile')">Profile</button>
+        <button onclick="showPage('settings')">Settings</button>
+    </nav>
+
+    <button class="logout" onclick="logout()">Logout</button>
+</aside>
+
+<main class="content">
+
+<!-- HOME -->
+<section id="home" class="page active">
+    <h1 id="welcomeText"></h1>
+
+    <div class="gallery">
+        <img src="meme1.jpeg">
+        <img src="meme2.jpeg">
+        <img src="meme3.jpeg">
+        <img src="meme4.jpeg">
+    </div>
+
+
+</section>
+
+<!-- PROFILE -->
+<section id="profile" class="page">
+    <div class="profile-card">
+        <img id="fotoPreview" src="zidan.jpeg">
+
+        <div>
+            <h2 id="namaTampil"></h2>
+            <input type="file" id="uploadFoto" accept="image/*">
+        </div>
+    </div>
+
+    <!-- GAMBAR TAMBAHAN -->
+    <div class="extra-image">
+        <img src="ml.jpeg">
+    </div>
+</section>
+
+<!-- SETTINGS -->
+<section id="settings" class="page">
+
+<h2>Settings</h2>
+
+<label>
+<input type="checkbox" id="darkToggle">
+ Dark Mode
+</label>
+
+<br><br>
+
+<label>Font</label>
+<select id="fontSelect">
+<option value="Segoe UI">Default</option>
+<option value="Poppins">Poppins</option>
+<option value="Georgia">Georgia</option>
+</select>
+
+<br><br>
+
+<label>Upload Background</label>
+<input type="file" id="bgUpload" accept="image/*">
+
+</section>
+
+</main>
+</div>
+
+<div id="notif" class="notif"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
